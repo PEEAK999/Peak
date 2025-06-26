@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline';">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="PEAK.9">
+  <title>PEAK.9 | Elevated Streetwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Cambridge Gothic';
+      src: url('/fonts/CambridgeGothic-Regular.woff2') format('woff2'),
+           url('/fonts/CambridgeGothic-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cambridge Gothic', 'Montserrat';
+      background-color: #0b0b0c;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #111, #222);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-family: 'Cambridge Gothic', sans-serif;
+      font-size: 2.5rem;
+      color: #f2c94c;
+      letter-spacing: 2px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #ddd;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #f2c94c;
+    }
+    .hero {
+      height: 90vh;
+      background: url('/path-to-model-image.jpg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 4rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+    .hero-content a {
+      text-decoration: none;
+      background-color: #f2c94c;
+      padding: 0.75rem 2rem;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .hero-content a:hover {
+      background-color: #e4b81d;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      color: #bbb;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 5rem 0 2rem 0;
+      color: #aaa;
+    }
+    .cta {
+      text-align: center;
+      padding: 2rem;
+    }
+    .cta a {
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      margin: 1rem;
+      background-color: #f2c94c;
+      color: #000;
+      border-radius: 6px;
+      font-weight: 700;
+      transition: background 0.3s ease;
+    }
+    .cta a.alt {
+      background: #fff;
+      color: #111;
+    }
+    .cta a:hover {
+      background-color: #e0b700;
+    }
+    footer {
+      background-color: #111;
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .footer-links {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #bbb;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #f2c94c;
+    }
+    @media screen and (max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <noscript><p style="color:red; text-align:center">JavaScript is disabled in your browser. Please enable it for full functionality.</p></noscript>
+  <header>
+    <div class="logo">PEAK.9</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>  <section class="hero">
+    <div class="hero-content">
+      <h1>Rise Above the Ninth</h1>
+      <p>Art. Edge. Soul. The street’s new symbol has arrived.</p>
+      <a href="#shop">Shop the Collection</a>
+    </div>
+  </section>  <section id="about" class="about">
+    <div class="about-text">
+      <h2>The Origin of PEAK.9</h2>
+      <p>Every stitch is a statement. Every piece a philosophy. PEAK.9 is not just a label — it’s a movement. A blend of gritty visual storytelling and elevated streetwear, rooted in duality: beauty and ferocity, order and chaos.</p>
+    </div>
+    <img src="/images/peak9_story.jpg" alt="The story of Peak9">
+  </section>  <section id="gallery">
+    <h2 style="text-align:center; margin-bottom:2rem;">The Drop</h2>
+    <div class="gallery">
+      <img src="/images/peak9_jacket1.png" alt="Peak9 Bomber Jacket 1">
+      <img src="/images/peak9_jacket2.png" alt="Peak9 Bomber Jacket 2">
+      <img src="/images/peak9_jacket3.png" alt="Peak9 Bomber Jacket 3">
+      <img src="/images/peak9_jacket4.png" alt="Peak9 Bomber Jacket 4">
+    </div>
+  </section>  <section class="quote">
+    “Silk minds float above the ninth peak.”
+  </section>  <section class="cta">
+    <a href="#shop">Buy Now</a>
+    <a href="#" class="alt">Follow the Vision</a>
+  </section>  <footer>
+    <p>&copy; 2025 PEAK.9 | Crafted for the bold</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">Email</a>
+    </div>
+  </footer>
+</body>
+</html>
